@@ -5,3 +5,72 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+ul,
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 1rem;
+    transition: .4s ease-in-out;
+}
+
+a:hover {
+    color: #eb4909;
+}
+
+/*nav*/
+.navbar {
+    width: 100%;
+    height: 60px;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navbar .logo a {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-left: 10px;
+}
+
+.navbar .links {
+    display: flex;
+    gap: 2rem;
+}
+
+.navbar .toggle_btn {
+    color: #ffffff;
+    font-size: 1.5rem;
+    cursor: pointer;
+    display: none;
+    margin-right: 10px;
+}
+
+.action_btn {
+    background-color: #eb4909;
+    color: #ffffff;
+    padding: 0.5rem 1rem;
+    border: none;
+    outline: none;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: scale 0.2 ease;
+    margin-right: 10px;
+}
+
+.action_btn:hover {
+    scale: 1.05;
+    color: #ffffff;
+}
+
+.action_btn:active {
+    scale: 0.95;
+}
