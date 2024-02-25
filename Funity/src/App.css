@@ -74,3 +74,39 @@ a:hover {
 .action_btn:active {
     scale: 0.95;
 }
+
+
+
+/*responsive design*/
+@media (max-width: 992px) {
+  /*nav*/
+  .navbar .links,
+  .navbar .action_btn {
+    display: none;
+  }
+
+  .navbar .toggle_btn {
+    display: block;
+  }
+
+  /*dropdown*/
+  .dropdown_menu {
+    display: block;
+    z-index: 1;
+  }
+
+  .open {
+    display: none;
+  }
+}
+
+
+
+
+@media (max-width: 576px) {
+  .dropdown_menu {
+    z-index: 1;
+    left: 2rem;
+    width: unset;
+  }
+}
