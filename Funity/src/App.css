@@ -1,9 +1,9 @@
 * {
-    /* font-family: "Orbitron", sans-serif;
+  /* font-family: "Orbitron", sans-serif;
     font-weight: 400; */
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
@@ -27,6 +27,10 @@ body::-webkit-scrollbar-thumb {
 
 .m-top {
   margin-top: 30rem;
+}
+
+.m-top-med {
+  margin-top: 20px;
 }
 
 .sn-main {
