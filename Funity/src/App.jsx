@@ -10,6 +10,10 @@ import qualityEduc from './assets/images/qualityEduc.jpg';
 import sustainableAgriImg from './assets/images/sustainableAgri.jpg';
 import sustainableTranspoImg from './assets/images/sustainableTranspoImg.png';
 
+
+import SdgListComponent from './components/SdgListComponent';
+import SupportingSdgCard from './cards/SupportingSdgCard';
+
 export default function App() {
 
   const [display, setDisplay] = useState("none");
@@ -591,77 +595,35 @@ export default function App() {
                             </p>
                         </div>
                         <div className="grid gap-6 md:grid-cols-2">
-                            <div className="flex flex-col gap-1 relative">
-                                <img src={sustainableTranspoImg} alt="sustainableTranspoPhoto" width="600" height="400"
-                                    className="rounded-lg object-cover aspect-[4/3] overflow-hidden" />
-                                <a href="https://commons.wikimedia.org/wiki/File:United_Nations_sustainable_development_goal_11.2_sustainable_transport.png" target="_blank"
-                                    className="absolute bottom-20 mb-4 right-2 bg-white text-black bg-opacity-75 px-2 py-1 text-sm cursor-pointer">
-                                    Click to view credits
-                                </a>
-                                <div className="flex flex-col gap-1">
-                                    <h3 className="text-xl font-semibold">
-                                        Sustainable Transportation
-                                    </h3>
-                                    <p className="text-sm text-gray-500 dark:text-gray-400">
-                                        Promoting the use of bicycles and electric vehicles to reduce
-                                        carbon emissions and improve air quality.
-                                    </p>
-                                </div>
-                            </div>
-                            <div className="flex flex-col gap-1 relative">
-                                <img src={sustainableAgriImg} alt="sustainableAgriImg" width="600" height="400"
-                                    className="rounded-lg object-cover aspect-[4/3] overflow-hidden" />
-                                <a href="https://www.merit.unu.edu/the-hidden-cost/"
-                                    target="_blank"
-                                    className="absolute bottom-20 mb-4 right-2 bg-white text-black bg-opacity-75 px-2 py-1 text-sm cursor-pointer">
-                                    Photo by Lance Cheung (Click to view credits)
-                                </a>
-                                <div className="flex flex-col gap-1">
-                                    <h3 className="text-xl font-semibold">
-                                        Sustainable Agriculture
-                                    </h3>
-                                    <p className="text-sm text-gray-500 dark:text-gray-400">
-                                        Supporting local farmers and promoting organic farming
-                                        practices to ensure food security and protect the
-                                        environment.
-                                    </p>
-                                </div>
-                            </div>
-                            <div className="flex flex-col gap-1 relative">
-                                <img src={qualityEduc} alt="qualityEducImg" width="600" height="400"
-                                    className="rounded-lg object-cover aspect-[4/3] overflow-hidden" />
-                                <a href="https://www.flickr.com/photos/asiandevelopmentbank/21431207238" target="_blank"
-                                    className="absolute bottom-20 mb-4 right-2 bg-white text-black bg-opacity-75 px-2 py-1 text-sm cursor-pointer">
-                                    Click to view credit
-                                </a>
-                                <div className="flex flex-col gap-1">
-                                    <h3 className="text-xl font-semibold">
-                                        Quality Education
-                                    </h3>
-                                    <p className="text-sm text-gray-500 dark:text-gray-400">
-                                        Volunteering to teach children in underserved communities and
-                                        advocating for inclusive and equitable education for all.
-                                    </p>
-                                </div>
-                            </div>
-                            <div className="flex flex-col gap-1 relative">
-                                <img src={cleanEnergyImg} alt="cleanEnergyImg" width="600" height="400"
-                                    className="rounded-lg object-cover aspect-[4/3] overflow-hidden" />
-                                <a href="https://www.flickr.com/photos/asiandevelopmentbank/21431017820" target="_blank"
-                                    className="absolute bottom-20 mb-4 right-2 bg-white text-black bg-opacity-75 px-2 py-1 text-sm cursor-pointer">
-                                    Click to view credit
-                                </a>
-                                <div className="flex flex-col gap-1">
-                                    <h3 className="text-xl font-semibold">
-                                        Clean Energy Innovation
-                                    </h3>
-                                    <p className="text-sm text-gray-500 dark:text-gray-400">
-                                        Supporting research and development of renewable energy
-                                        technologies and advocating for policies that promote the
-                                        transition to clean energy.
-                                    </p>
-                                </div>
-                            </div>
+                            <SupportingSdgCard img={sustainableTranspoImg}
+                                               alt="sustainableTranspoPhoto"
+                                               source="https://commons.wikimedia.org/wiki/File:United_Nations_sustainable_development_goal_11.2_sustainable_transport.png"
+                                               title="Sustainable Transportation"
+                                               details="Promoting the use of bicycles and electric vehicles to reduce
+                                               carbon emissions and improve air quality." />
+                            <SupportingSdgCard img={sustainableAgriImg}
+                                               alt="sustainableAgriImg"
+                                               source="https://www.merit.unu.edu/the-hidden-cost/"
+                                               title="Sustainable Agriculture"
+                                               details="Supporting local farmers and promoting organic farming
+                                               practices to ensure food security and protect the
+                                               environment."/>
+                            <SupportingSdgCard img={qualityEduc}
+                                               alt="qualityEducImg"
+                                               source="https://www.flickr.com/photos/asiandevelopmentbank/21431207238"
+                                               title="Quality Education"
+                                               details="Volunteering to teach children in underserved communities and
+                                               advocating for inclusive and equitable education for all."/>
+                            <SupportingSdgCard img={cleanEnergyImg}
+                                               alt="Photo by Lance Cheung"
+                                               source="https://www.flickr.com/photos/asiandevelopmentbank/21431017820"
+                                               title="Clean Energy Innovation"
+                                               details="Supporting research and development of renewable energy
+                                               technologies and advocating for policies that promote the
+                                               transition to clean energy."/>
+                            
+        
+                            
                         </div>
                     </div>
                 </div>
@@ -679,141 +641,10 @@ export default function App() {
                             Practical examples of how you can contribute to the Sustainable Development Goals.
                         </p>
                     </div>
-                    <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:gap-12">
-                        <div className="flex flex-col gap-2">
-                            <h3 className="text-xl font-bold">1. No Poverty</h3>
-                            <p className="text-sm text-gray-500 md:text-base dark:text-gray-400">
-                                Volunteer at a local shelter or food bank. Support organizations that provide microfinance services
-                                to
-                                entrepreneurs in low-income communities.
-                            </p>
-                        </div>
-                        <div className="flex flex-col gap-2">
-                            <h3 className="text-xl font-bold">2. Zero Hunger</h3>
-                            <p className="text-sm text-gray-500 md:text-base dark:text-gray-400">
-                                Reduce food waste by supporting initiatives that collect surplus food from restaurants and grocery
-                                stores
-                                to distribute to those in need.
-                            </p>
-                        </div>
-                        <div className="flex flex-col gap-2">
-                            <h3 className="text-xl font-bold">3. Good Health and Well-being</h3>
-                            <p className="text-sm text-gray-500 md:text-base dark:text-gray-400">
-                                Promote healthy lifestyles in your community by organizing fitness classes, health workshops, or
-                                mental
-                                health awareness events.
-                            </p>
-                        </div>
-                        <div className="flex flex-col gap-2">
-                            <h3 className="text-xl font-bold">4. Quality Education</h3>
-                            <p className="text-sm text-gray-500 md:text-base dark:text-gray-400">
-                                Mentor students, especially those from disadvantaged backgrounds, to help them stay engaged in
-                                learning
-                                and encourage them to pursue higher education.
-                            </p>
-                        </div>
-                        <div className="flex flex-col gap-2">
-                            <h3 className="text-xl font-bold">5. Gender Equality</h3>
-                            <p className="text-sm text-gray-500 md:text-base dark:text-gray-400">
-                                Support organizations that provide education and training to empower women and girls, advocate for
-                                policies that promote gender equality in the workplace and beyond.
-                            </p>
-                        </div>
-                        <div className="flex flex-col gap-2">
-                            <h3 className="text-xl font-bold">6. Clean Water and Sanitation</h3>
-                            <p className="text-sm text-gray-500 md:text-base dark:text-gray-400">
-                                Participate in beach or river clean-up projects, raise awareness about water conservation, and
-                                support
-                                initiatives that provide access to clean water in underserved communities.
-                            </p>
-                        </div>
-                        <div className="flex flex-col gap-2">
-                            <h3 className="text-xl font-bold">7. Affordable and Clean Energy</h3>
-                            <p className="text-sm text-gray-500 md:text-base dark:text-gray-400">
-                                Advocate for renewable energy policies in your community, promote energy efficiency, and support the
-                                adoption of sustainable energy solutions.
-                            </p>
-                        </div>
-                        <div className="flex flex-col gap-2">
-                            <h3 className="text-xl font-bold">8. Decent Work and Economic Growth</h3>
-                            <p className="text-sm text-gray-500 md:text-base dark:text-gray-400">
-                                Support small businesses and entrepreneurs, advocate for policies that promote job creation and
-                                provide
-                                training and skills development opportunities for youth and adults.
-                            </p>
-                        </div>
-                        <div className="flex flex-col gap-2">
-                            <h3 className="text-xl font-bold">9. Industry, Innovation, and Infrastructure</h3>
-                            <p className="text-sm text-gray-500 md:text-base dark:text-gray-400">
-                                Support initiatives that promote technological innovation and entrepreneurship, advocate for
-                                investment in
-                                sustainable infrastructure, and participate in programs that bridge the digital divide.
-                            </p>
-                        </div>
-                        <div className="flex flex-col gap-2">
-                            <h3 className="text-xl font-bold">10. Reduced Inequality</h3>
-                            <p className="text-sm text-gray-500 md:text-base dark:text-gray-400">
-                                Advocate for policies that address discrimination and inequality, support organizations that provide
-                                social services to marginalized communities, and raise awareness about the impact of inequality on
-                                society.
-                            </p>
-                        </div>
-                        <div className="flex flex-col gap-2">
-                            <h3 className="text-xl font-bold">11. Sustainable Cities and Communities</h3>
-                            <p className="text-sm text-gray-500 md:text-base dark:text-gray-400">
-                                Participate in urban greening projects, promote sustainable transportation options, and support
-                                initiatives that make cities more inclusive, safe, and resilient.
-                            </p>
-                        </div>
-                        <div className="flex flex-col gap-2">
-                            <h3 className="text-xl font-bold">12. Responsible Consumption and Production</h3>
-                            <p className="text-sm text-gray-500 md:text-base dark:text-gray-400">
-                                Reduce your ecological footprint by practicing waste reduction, recycling, and upcycling, support
-                                businesses that adopt sustainable practices, and advocate for circular economy principles.
-                            </p>
-                        </div>
-                        <div className="flex flex-col gap-2">
-                            <h3 className="text-xl font-bold">13. Climate Action</h3>
-                            <p className="text-sm text-gray-500 md:text-base dark:text-gray-400">
-                                Take action to reduce greenhouse gas emissions in your community, support reforestation and
-                                conservation
-                                efforts, advocate for climate-resilient policies, and raise awareness about the urgency of climate
-                                change.
-                            </p>
-                        </div>
-                        <div className="flex flex-col gap-2">
-                            <h3 className="text-xl font-bold">14. Life Below Water</h3>
-                            <p className="text-sm text-gray-500 md:text-base dark:text-gray-400">
-                                Participate in beach or river clean-up projects, support marine conservation efforts, reduce plastic
-                                pollution, and raise awareness about the importance of preserving ocean ecosystems.
-                            </p>
-                        </div>
-                        <div className="flex flex-col gap-2">
-                            <h3 className="text-xl font-bold">15. Life on Land</h3>
-                            <p className="text-sm text-gray-500 md:text-base dark:text-gray-400">
-                                Support reforestation and habitat restoration projects, engage in biodiversity conservation efforts,
-                                raise
-                                awareness about wildlife protection, and promote sustainable land management practices.
-                            </p>
-                        </div>
-                        <div className="flex flex-col gap-2">
-                            <h3 className="text-xl font-bold">16. Peace and Justice Strong Institutions</h3>
-                            <p className="text-sm text-gray-500 md:text-base dark:text-gray-400">
-                                Advocate for human rights, access to justice, and the rule of law, support initiatives that promote
-                                social
-                                cohesion and conflict resolution, and engage in peacebuilding efforts in your community.
-                            </p>
-                        </div>
-                        <div className="flex flex-col gap-2">
-                            <h3 className="text-xl font-bold">17. Partnerships for the Goals</h3>
-                            <p className="text-sm text-gray-500 md:text-base dark:text-gray-400">
-                                Collaborate with local organizations, businesses, and government agencies to advance the SDGs,
-                                support
-                                cross-sectoral partnerships, and advocate for multi-stakeholder cooperation to achieve sustainable
-                                development.
-                            </p>
-                        </div>
-                    </div>
+
+                    {/* List of SDG with brief explanation */}
+                    <SdgListComponent />
+                    
                 </div>
             </section>
 
@@ -833,18 +664,18 @@ export default function App() {
                         </p>
                     </div>
                     <div className="flex justify-center space-x-4">
-                        <a className="flex h-9 items-center rounded-md border border-gray-200 border-gray-200 bg-[#0d0e14] px-4 py-2 text-sm font-medium shadow-sm gap-2 transition-colors hover:bg-gray-100 hover:text-gray-900 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-gray-950 disabled:pointer-events-none disabled:opacity-50 dark:border-gray-800 dark:border-gray-800 dark:bg-gray-950 dark:hover:bg-gray-800 dark:hover:text-gray-50 dark:focus-visible:ring-gray-300"
+                        <a className="flex h-9 items-center rounded-md border border-gray-200  bg-[#0d0e14] px-4 py-2 text-sm font-medium shadow-sm gap-2 transition-colors hover:bg-gray-100 hover:text-gray-900 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-gray-950 disabled:pointer-events-none disabled:opacity-50 dark:border-gray-800 dark:border-gray-800 dark:bg-gray-950 dark:hover:bg-gray-800 dark:hover:text-gray-50 dark:focus-visible:ring-gray-300"
                             href="https://sdgs.un.org/news" target="_blank">
                             <i className="fa-solid fa-newspaper"></i>
                             News Updates
                         </a>
                         <a
-                            className="flex h-9 items-center rounded-md border border-gray-200 border-gray-200 bg-[#0d0e14] px-4 py-2 text-sm font-medium shadow-sm gap-2 transition-colors hover:bg-gray-100 hover:text-gray-900 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-gray-950 disabled:pointer-events-none disabled:opacity-50 dark:border-gray-800 dark:border-gray-800 dark:bg-gray-950 dark:hover:bg-gray-800 dark:hover:text-gray-50 dark:focus-visible:ring-gray-300"
+                            className="flex h-9 items-center rounded-md border border-gray-200  bg-[#0d0e14] px-4 py-2 text-sm font-medium shadow-sm gap-2 transition-colors hover:bg-gray-100 hover:text-gray-900 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-gray-950 disabled:pointer-events-none disabled:opacity-50 dark:border-gray-800 dark:border-gray-800 dark:bg-gray-950 dark:hover:bg-gray-800 dark:hover:text-gray-50 dark:focus-visible:ring-gray-300"
                             href="#notFound" target="_blank">
                             <i className="fa-solid fa-group-arrows-rotate"></i>
                             Community
                         </a><a
-                            className="flex h-9 items-center rounded-md border border-gray-200 border-gray-200 bg-[#0d0e14] px-4 py-2 text-sm font-medium shadow-sm gap-2 transition-colors hover:bg-gray-100 hover:text-gray-900 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-gray-950 disabled:pointer-events-none disabled:opacity-50 dark:border-gray-800 dark:border-gray-800 dark:bg-gray-950 dark:hover:bg-gray-800 dark:hover:text-gray-50 dark:focus-visible:ring-gray-300"
+                            className="flex h-9 items-center rounded-md border border-gray-200  bg-[#0d0e14] px-4 py-2 text-sm font-medium shadow-sm gap-2 transition-colors hover:bg-gray-100 hover:text-gray-900 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-gray-950 disabled:pointer-events-none disabled:opacity-50 dark:border-gray-800 dark:border-gray-800 dark:bg-gray-950 dark:hover:bg-gray-800 dark:hover:text-gray-50 dark:focus-visible:ring-gray-300"
                             href="https://unstats.un.org/sdgs/report/2023/" target="_blank">
                             <i className="fa-solid fa-square-pen"></i>
                             SDG Updates
