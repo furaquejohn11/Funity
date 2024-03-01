@@ -25,6 +25,8 @@ import firstVid from '../assets/images/firstYt.png';
 import secondVid from '../assets/images/secondYt.png';
 import thirdVid from '../assets/images/thirdYt.png';
 
+import abstractBlue from '../assets/images/abstractBlue.png'
+
 export const images = {
     logo,
     projImg,
@@ -51,5 +53,6 @@ export const images = {
     goal17Img,
     firstVid,
     secondVid,
-    thirdVid
+    thirdVid,
+    abstractBlue
 };
