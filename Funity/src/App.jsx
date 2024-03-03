@@ -50,8 +50,6 @@ export default function App() {
 
             <div className="home-section-icons relative">
                 <img className="absolute w-full globeIcon" src={images.abstractBlue} alt="globeIcon-by-sanei.hesam@gmail.com-from-figma-cc-licensed" />
-                <p className="absolute top-0 right-0 bg-white text-black bg-opacity-10 px-2 py-1 text-sm cursor-pointer">Icon from Figma by sanei.hesam@gmail.com (CC Licensed)
-                </p>
             </div>
 
 
